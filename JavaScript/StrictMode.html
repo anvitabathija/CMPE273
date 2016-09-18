@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+
+<br>
+<input type="button" id="btn_mode" value="Check value without strict mode" onclick="withoutStrict();"/>
+<br>
+Value : <p id="demo1"></p>
+<br>
+<br>
+<input type="button" id="btn_mode" value="Check value without strict mode" onclick="withStrict();"/>
+<br>
+Value : <p id="demo2"></p>
+<script>
+temp = 5;
+function withoutStrict()
+{
+	document.getElementById("demo1").innerHTML = temp;
+}
+function withoutStrict()
+{
+	"use strict";
+	document.getElementById("demo1").innerHTML = temp;
+}
+
+</script>
+</body>
+</html>
