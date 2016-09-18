@@ -1,0 +1,30 @@
+<html>
+<head>
+<body>
+
+Course list:
+<br>
+<p id="courses"></p>
+
+
+<script>
+var objText = '{"Courses":[' +
+                           '{"CourseNumber":"272","CourseName":"Enterprise systems"},'+
+                           '{"CourseNumber":"281","CourseName":"Cloud Technologies"},'+
+                           '{"CourseNumber":"283","CourseName":"Virtualization Technologies"},'+
+                           '{"CourseNumber":"273","CourseName":"Enterprise Distributed systems"},'+
+                           '{"CourseNumber":"277","CourseName":"SmartPhone Application Developement"}]}';
+                           
+var JSONobj = JSON.parse(objText);
+var courseDisplay = "";
+
+for(var i = 0; i < 5; i++)
+{
+	courseDisplay = courseDisplay + JSONobj.Courses[i].CourseNumber + " "+JSONobj.Courses[i].CourseName+ ", <br>"
+}
+
+document.getElementById("courses").innerHTML = courseDisplay;
+
+</script></body>
+</head>
+</html>

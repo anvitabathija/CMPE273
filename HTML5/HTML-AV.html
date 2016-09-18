@@ -1,0 +1,19 @@
+<html>
+<head>
+<body>
+<input type="button" id="audiovideo" value="Play" onClick="submit();"/>
+
+<video width="320" height="240" controls>
+<source src="C:\Users\Anvita\workspace\AssignmentJS\HTML5 - Video.mp4" type="video/mp4" controls>
+</video>
+
+<script>
+function submit(){
+	var playAV = document.getElementsByTagName("video")[0];
+	playAV.play();
+}
+
+</script>
+</body>
+</head>
+</html>

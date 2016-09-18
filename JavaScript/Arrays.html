@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<b>Old array is:</b>
+
+<p id="arrays"></p>
+
+<b>New array in sorted order is:</b>
+<p id="arrays_new"></p>
+
+<script>
+var names = ["mike","jack","jason","john","alson","rachael"];
+document.getElementById("arrays").innerHTML = names.toString();
+
+var newname = prompt("Enter a new name")
+
+names.push(newname);
+document.getElementById("arrays_new").innerHTML = names.sort();
+
+</script>
+
+</body>
+</html>
+

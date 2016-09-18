@@ -1,0 +1,48 @@
+<html>
+<head>
+<body>
+<img onmouseover="mickie(this)" onmouseout="mickie_1(this)" src="https://upload.wikimedia.org/wikipedia/en/d/d4/Mickey_Mouse.png" width="100" height="100">
+<p id="mickie_detail"></p>
+<p id="mickie_detail"></p>
+
+<br>
+<br>
+<img onmouseover="minion(this)" onmouseout="minion_1(this)" src="https://soyeon12.files.wordpress.com/2013/07/dm2_minion_dave_020.jpg" width="400" height="200">
+<p id="minion_detail"></p>
+<p id="minion_detail"></p>
+
+
+
+<script>
+
+function mickie(obj)
+{
+	obj.style.width = "350";
+	obj.style.height = "250";
+	document.getElementById("mickie_detail").innerHTML = "My name is mickie";
+}
+function mickie_1(obj)
+{
+	obj.style.width = "100";
+	obj.style.height = "100";
+	document.getElementById("mickie_detail").innerHTML = "";
+}
+
+function minion(obj)
+{
+	obj.style.width = "550";
+	obj.style.height = "350";
+	document.getElementById("minion_detail").innerHTML = "My name is minion";
+}
+function minion_1(obj)
+{
+	obj.style.width = "400";
+	obj.style.height = "200";
+	document.getElementById("minion_detail").innerHTML = "";
+}
+
+
+</script>
+</body>
+</head>
+</html>

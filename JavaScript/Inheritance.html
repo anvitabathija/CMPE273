@@ -1,0 +1,56 @@
+<html>
+<head>
+<body>
+<input type="button" value="Check value of parent" onclick="inheritanceDemo(parent);"/>
+<input type="button" value="Check value of child" onclick="inheritanceDemo(c);"/>
+<br>
+Value : <p id="value"></p>
+
+<script>
+
+	var Parent = function()
+	{
+		this.side = 20;
+	}
+	
+	Parent.prototype.display = function()
+	{
+		document.getElementById("value").innerHTML = this.side;
+	}
+	
+	var p = new Parent();
+	//p.display();
+	
+	var inherit = function(c,p)
+	{
+		c.prototype = Object.create(p.prototype);
+	}
+	
+	var Child = function()
+	{
+		this.side = 10;
+		this.otherside = 12;
+	}
+	
+	inherit(Child,Parent)
+
+	var c = new Child();
+	//c.display();
+	
+	function inheritanceDemo(obj)
+	{
+		if(obj == parent)
+		{
+			p.display();
+		}
+		else
+		{
+			c.display();
+		}
+	}
+</script>
+
+
+</body>
+</head>
+</html>

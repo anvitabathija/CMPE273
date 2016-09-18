@@ -1,0 +1,37 @@
+<html>
+<head>
+<body>
+<input type = "submit" value="Check" onClick="check();"/>
+<br>
+
+Login : <input type="text" id="mylogin"/><br>
+Password : <input type="password" id="mypassword"/>
+<br>
+<input type = "submit" value="Submit" onClick="submit();"/>
+
+<p id="testid"></p>
+<p id="testpassword"></p>
+
+<script>
+
+function check(){
+
+	document.getElementById('testid').innerHTML = localStorage.getItem('sid');
+	document.getElementById('testpassword').innerHTML = localStorage.getItem('spassword');	
+	document.getElementById('mylogin').innerHTML = " Hi";	
+	document.getElementById('mypassword').innerHTML = " helo ";	
+}
+
+function submit(){
+
+	var id = document.getElementById('mylogin');
+	var password = document.getElementById('mypassword');
+
+	localStorage.setItem('sid',id.value);
+	localStorage.setItem('spassword',password.value);
+}
+
+</script>
+</body>
+</head>
+</html>

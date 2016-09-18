@@ -1,0 +1,52 @@
+<html>
+<head>
+<body>
+<b>Quote : </b> The 1 quick onyx goblin jumps 2 times over the lazy dwarf
+<br><br>
+<input type="button" value="Check if the string contains the word 'quick'" onclick="checkString();"/>
+<br><br>
+<p id="string"></p>
+<br><br>
+<input type="button" value="Check the count of character 'o'" onclick="checkCount();"/>
+<br><br>
+<p id="count"></p>
+<br><br>
+<input type="button" value="Check if the string contains any numbers" onclick="checkNumber();"/>
+<br><br>
+<p id="number"></p>
+
+
+<script>
+
+var str = "The 1 quick onyx goblin jumps 2 times over the lazy dwarf";
+
+function checkString()
+{
+	var check = /quick/i;
+	var output = str.match(check);
+	document.getElementById("string").innerHTML = output;
+}
+
+function checkCount()
+{
+	var check = /o/ig;
+	var output = str.match(check);
+	var c = 0;
+	for(var i = 0; i<output.length; i++)
+	{
+			c++;
+	}
+	document.getElementById("count").innerHTML = c;
+}
+
+function checkNumber()
+{
+	var check = /[0-9]/g;
+	var output = str.match(check);
+	document.getElementById("number").innerHTML = output;
+}
+
+</script>
+</body>
+</head>
+</html>

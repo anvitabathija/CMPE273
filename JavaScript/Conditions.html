@@ -1,0 +1,45 @@
+<html>
+<head>
+<body>
+
+Javascript check for conditions
+
+<br><br>
+
+<input type="button" value="Male" onclick="conditionCheck(0);"/>
+<input type="button" value="Female" onclick="conditionCheck(1);"/>
+<br><br>
+<b>Total Number of People: </b><p id="total"></p>
+<br><br>
+<input type="button" value="Check majority" onclick="majority();"/>
+<br>
+<p id="majority"></p>
+
+<script>
+var total = 0;
+var male = 0;
+var female = 0;
+function conditionCheck(obj)
+{
+	
+	obj ? female=female+1 : male=male+1;
+	
+	total = male + female;
+	document.getElementById("total").innerHTML = total;
+}
+
+function majority()
+{
+	if(female > male)
+		document.getElementById("majority").innerHTML = "Females are in majority";
+	else if(male > female)
+		document.getElementById("majority").innerHTML = "Males are in majority";
+	else
+		document.getElementById("majority").innerHTML = "Both are equal";
+}
+
+
+</script>
+</body>
+</head>
+</html>
