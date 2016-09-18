@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+
+function checkType()
+{
+	var ip = 100 + 100;
+	document.getElementById("result").innerHTML = typeof ip;
+}
+
+
+function checkType1()
+{
+	var ip = String(100+100);
+	document.getElementById("result1").innerHTML = typeof ip;
+}
+
+</script>
+
+<b>Data </b>: 100 + 100
+<br>
+<input type="button" id="type" value="Check Type" onclick="checkType();"/>
+<p id="result"></p>
+<br><br>
+<b>Data </b>: 100 + 100
+<br>
+<input type="button" id="type" value="Check Type" onclick="checkType1();"/>
+<p id="result1"></p>
+</body>
+</html>
