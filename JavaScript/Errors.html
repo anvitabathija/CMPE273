@@ -1,0 +1,39 @@
+<html>
+<head>
+<body>
+<script>
+
+var arr = [1,2,3,4,5,6,7,8];
+
+function pop()
+{
+	try
+	{
+		if(arr.length > 0)
+		{
+			arr.pop();
+			document.getElementById("array").innerHTML = arr;
+		}
+		else
+		{
+			throw "Empty array : No more elements to pop";
+		}
+	}
+	catch(err)
+	{
+		document.getElementById("array").innerHTML = err;
+	}
+		
+	
+}
+
+</script>
+
+<input type="button" value="Pop" id="pop" onclick="pop();"/>
+
+<br><br>Array Elements : <p id="array"></p>
+
+
+</body>
+</head>
+</html>
