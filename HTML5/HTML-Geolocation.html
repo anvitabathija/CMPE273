@@ -1,0 +1,33 @@
+<html>
+<head>
+<style>
+#location {width: 800px;height: 800px;}
+</style>
+</head>
+<body>
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+function showLocation() {
+	if (navigator.geolocation) 
+		navigator.geolocation.getCurrentPosition(displayLocation);                             
+	else  
+		document.getElementById("location").innerHTML = "GeoLocation Not supported";
+	    
+}
+function displayLocation(pos) {
+    var longitude = pos.coords.longitude;    
+    var latitude = pos.coords.latitude;
+    
+    var location = new google.maps.LatLng(latitude,longitude);
+    var mapDisplay = document.getElementById('location');
+    
+    var view = new google.maps.Map(mapDisplay, {center: location,zoom: 18});
+    var pin = new google.maps.Marker({position:location,mapDisplay:view});
+}
+</script>
+
+<button type="button" onclick="showLocation()">My Location</button>
+<div id="location"></div>
+</body>
+</html>
