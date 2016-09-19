@@ -2,7 +2,7 @@ package Final;
 import java.util.*;
 import java.io.*;
 
-class UniqueDuplicateCountChar
+class UniqueDuplicateArray
 {
 	public static void main(String args[])
 	{
