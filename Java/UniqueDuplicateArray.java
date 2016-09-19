@@ -12,7 +12,7 @@ class UniqueDuplicateArray
 			System.out.println("Enter a new string");
 			String ip = br.readLine();
 			
-			UniqueDuplicateCountChar ud = new UniqueDuplicateCountChar();
+			UniqueDuplicateArray ud = new UniqueDuplicateArray();
 			ud.checkUniqueDup(ip);
 
 		}
